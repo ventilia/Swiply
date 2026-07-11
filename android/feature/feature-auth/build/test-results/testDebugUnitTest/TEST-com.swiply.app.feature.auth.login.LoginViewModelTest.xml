@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.swiply.app.feature.auth.login.LoginViewModelTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-07-11T16:11:09.953Z" hostname="DESKTOP-23BKBGL" time="3.31">
+  <properties/>
+  <testcase name="submit заблокирован для короткого пароля" classname="com.swiply.app.feature.auth.login.LoginViewModelTest" time="2.355"/>
+  <testcase name="новый ввод сбрасывает ошибку" classname="com.swiply.app.feature.auth.login.LoginViewModelTest" time="0.879"/>
+  <testcase name="неверный пароль — ошибка в состоянии, ввод сохраняется" classname="com.swiply.app.feature.auth.login.LoginViewModelTest" time="0.064"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (C:\Users\GAMER\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.18.2\62f38a6faf7f069d661b79a07d566f504b0b20c4\byte-buddy-agent-1.18.2.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>

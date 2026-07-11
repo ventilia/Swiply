@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="onboarding_skip">Skip</string>
+    <string name="onboarding_next">Next</string>
+    <string name="onboarding_start">Get started</string>
+    <string name="onboarding_title_1">Swipe</string>
+    <string name="onboarding_text_1">Right if you like them, left to pass. Familiar, but better.</string>
+    <string name="onboarding_title_2">Match</string>
+    <string name="onboarding_text_2">A mutual like is a match — even if the other person is offline.</string>
+    <string name="onboarding_title_3">Chat</string>
+    <string name="onboarding_text_3">Real-time chat: typing, delivered, read.</string>
+</resources>

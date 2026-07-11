@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
+<head th:replace="~{admin/layout :: head('Модерация фото')}"></head>
+<body>
+<nav th:replace="~{admin/layout :: nav(${active})}"></nav>
+<div class="container">
+    <h1>Фото на модерации</h1>
+
+    <div class="photo-grid" th:if="${!#lists.isEmpty(photos)}">
+        <div class="photo-card" th:each="p : ${photos}">
+            <img th:src="${p.url}" alt="Фото на модерации">
+            <div class="meta">
+                <div th:text="${p.userEmail ?: p.userId}">user@example.com</div>
+                <div class="muted" th:text="${#strings.substring(p.createdAt.toString(), 0, 16)}">2026-01-01</div>
+            </div>
+            <div class="actions">
+                <form th:action="@{'/admin/photos/' + ${p.id} + '/approve'}" method="post">
+                    <button class="btn success" type="submit">Одобрить</button>
+                </form>
+                <form th:action="@{'/admin/photos/' + ${p.id} + '/reject'}" method="post">
+                    <button class="btn danger" type="submit">Отклонить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="empty" th:if="${#lists.isEmpty(photos)}">Очередь пуста 🎉</div>
+</div>
+</body>
+</html>

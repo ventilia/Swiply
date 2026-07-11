@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
+<head th:replace="~{admin/layout :: head('Пользователи')}"></head>
+<body>
+<nav th:replace="~{admin/layout :: nav(${active})}"></nav>
+<div class="container">
+    <h1>Пользователи</h1>
+
+    <form class="filters" method="get" th:action="@{/admin/users}">
+        <input type="text" name="query" placeholder="Поиск: email или имя" th:value="${query}" style="width:280px;">
+        <select name="status">
+            <option value="" th:selected="${status == ''}">Любой статус</option>
+            <option value="ACTIVE" th:selected="${status == 'ACTIVE'}">ACTIVE</option>
+            <option value="SUSPENDED" th:selected="${status == 'SUSPENDED'}">SUSPENDED</option>
+            <option value="BANNED" th:selected="${status == 'BANNED'}">BANNED</option>
+            <option value="DELETED" th:selected="${status == 'DELETED'}">DELETED</option>
+        </select>
+        <button class="btn primary" type="submit">Найти</button>
+    </form>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Email</th><th>Имя</th><th>Роль</th><th>Статус</th><th>Почта</th>
+            <th>Создан</th><th>Активность</th><th>Действия</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="u : ${users}">
+            <td th:text="${u.email}">user@example.com</td>
+            <td th:text="${u.displayName ?: '—'}">Имя</td>
+            <td><span class="pill" th:classappend="${u.role.name}" th:text="${u.role}">USER</span></td>
+            <td><span class="pill" th:classappend="${u.status.name}" th:text="${u.status}">ACTIVE</span></td>
+            <td th:text="${u.emailVerified} ? '✓' : '—'" class="muted">✓</td>
+            <td class="muted" th:text="${#strings.substring(u.createdAt.toString(), 0, 10)}">2026-01-01</td>
+            <td class="muted" th:text="${u.lastActiveAt != null} ? ${#strings.substring(u.lastActiveAt.toString(), 0, 16)} : '—'">—</td>
+            <td>
+                <a class="btn ghost" th:href="@{'/admin/users/' + ${u.id}}">Открыть</a>
+                <div class="row-actions" th:if="${u.role.name == 'USER'}" style="margin-top:6px">
+                    <form th:if="${u.status.name == 'ACTIVE'}" th:action="@{'/admin/users/' + ${u.id} + '/warn'}" method="post">
+                        <button class="btn ghost" type="submit">Предупредить</button>
+                    </form>
+                    <form th:if="${u.status.name == 'ACTIVE'}" th:action="@{'/admin/users/' + ${u.id} + '/suspend'}" method="post">
+                        <button class="btn" type="submit">Приостановить</button>
+                    </form>
+                    <form th:if="${u.status.name != 'BANNED' and u.status.name != 'DELETED'}" th:action="@{'/admin/users/' + ${u.id} + '/ban'}" method="post">
+                        <button class="btn danger" type="submit">Бан</button>
+                    </form>
+                    <form th:if="${u.status.name == 'BANNED' or u.status.name == 'SUSPENDED'}" th:action="@{'/admin/users/' + ${u.id} + '/unban'}" method="post">
+                        <button class="btn success" type="submit">Разбанить</button>
+                    </form>
+                </div>
+            </td>
+        </tr>
+        <tr th:if="${#lists.isEmpty(users)}">
+            <td colspan="8" class="empty">Никого не нашлось</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="pager">
+        <a th:if="${page > 0}" class="btn ghost"
+           th:href="@{/admin/users(query=${query}, status=${status}, page=${page - 1})}">← Назад</a>
+        <a th:if="${#lists.size(users) == 25}" class="btn ghost"
+           th:href="@{/admin/users(query=${query}, status=${status}, page=${page + 1})}">Вперёд →</a>
+    </div>
+</div>
+</body>
+</html>

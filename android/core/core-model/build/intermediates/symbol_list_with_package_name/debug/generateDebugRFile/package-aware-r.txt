@@ -1,0 +1,1 @@
+com.swiply.app.core.model

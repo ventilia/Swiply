@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="blocked_empty">You have not blocked anyone</string>
+    <string name="blocked_title">Blocked users</string>
+    <string name="blocked_unblock">Unblock</string>
+    <string name="common_back">Back</string>
+    <string name="common_cancel">Cancel</string>
+    <string name="settings_account">Account</string>
+    <string name="settings_appearance">Appearance</string>
+    <string name="settings_blocked">Blocked users</string>
+    <string name="settings_delete">Delete account</string>
+    <string name="settings_delete_confirm">Delete forever</string>
+    <string name="settings_delete_password">Password</string>
+    <string name="settings_delete_text">Your data will be anonymized and photos deleted. This cannot be undone. Enter your password to confirm.</string>
+    <string name="settings_lang_en">English</string>
+    <string name="settings_lang_ru">Русский</string>
+    <string name="settings_lang_system">System</string>
+    <string name="settings_language">Language</string>
+    <string name="settings_logout">Sign out</string>
+    <string name="settings_notifications">Notifications</string>
+    <string name="settings_notifications_hint">Matches, likes and messages</string>
+    <string name="settings_privacy_hint">Incognito and profile visibility live in the profile editor</string>
+    <string name="settings_theme_dark">Dark</string>
+    <string name="settings_theme_light">Light</string>
+    <string name="settings_theme_system">System</string>
+    <string name="settings_title">Settings</string>
+</resources>

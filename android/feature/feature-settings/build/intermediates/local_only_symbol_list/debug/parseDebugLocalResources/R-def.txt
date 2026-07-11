@@ -1,0 +1,26 @@
+R_DEF: Internal format may change without notice
+local
+string blocked_empty
+string blocked_title
+string blocked_unblock
+string common_back
+string common_cancel
+string settings_account
+string settings_appearance
+string settings_blocked
+string settings_delete
+string settings_delete_confirm
+string settings_delete_password
+string settings_delete_text
+string settings_lang_en
+string settings_lang_ru
+string settings_lang_system
+string settings_language
+string settings_logout
+string settings_notifications
+string settings_notifications_hint
+string settings_privacy_hint
+string settings_theme_dark
+string settings_theme_light
+string settings_theme_system
+string settings_title

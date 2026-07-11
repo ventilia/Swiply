@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.swiply.app.feature.discovery.DiscoveryViewModelTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-07-11T16:11:08.880Z" hostname="DESKTOP-23BKBGL" time="3.952">
+  <properties/>
+  <testcase name="NO_LOCATION без фикса показывает needsLocation" classname="com.swiply.app.feature.discovery.DiscoveryViewModelTest" time="3.475"/>
+  <testcase name="разрешение гео обновляет локацию в фоне" classname="com.swiply.app.feature.discovery.DiscoveryViewModelTest" time="0.067"/>
+  <testcase name="префетч дозагружает при коротком стеке без дублей" classname="com.swiply.app.feature.discovery.DiscoveryViewModelTest" time="0.057"/>
+  <testcase name="start грузит ленту сразу (на бэке есть локация)" classname="com.swiply.app.feature.discovery.DiscoveryViewModelTest" time="0.043"/>
+  <testcase name="undo возвращает последнюю карточку наверх" classname="com.swiply.app.feature.discovery.DiscoveryViewModelTest" time="0.07"/>
+  <testcase name="взаимный лайк эмитит событие мэтча" classname="com.swiply.app.feature.discovery.DiscoveryViewModelTest" time="0.141"/>
+  <testcase name="rate limit возвращает карточку в стек" classname="com.swiply.app.feature.discovery.DiscoveryViewModelTest" time="0.039"/>
+  <testcase name="свайп убирает карточку и репортит на бэкенд" classname="com.swiply.app.feature.discovery.DiscoveryViewModelTest" time="0.043"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[WARNING: A Java agent has been loaded dynamically (C:\Users\GAMER\.gradle\caches\modules-2\files-2.1\net.bytebuddy\byte-buddy-agent\1.18.2\62f38a6faf7f069d661b79a07d566f504b0b20c4\byte-buddy-agent-1.18.2.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+</testsuite>

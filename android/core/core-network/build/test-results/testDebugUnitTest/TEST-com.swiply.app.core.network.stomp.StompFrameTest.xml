@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.swiply.app.core.network.stomp.StompFrameTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-07-11T16:11:08.110Z" hostname="DESKTOP-23BKBGL" time="0.125">
+  <properties/>
+  <testcase name="парсит CONNECTED-кадр с заголовками" classname="com.swiply.app.core.network.stomp.StompFrameTest" time="0.097"/>
+  <testcase name="парсит MESSAGE с телом и destination" classname="com.swiply.app.core.network.stomp.StompFrameTest" time="0.009"/>
+  <testcase name="заголовок с двоеточием в значении не ломается" classname="com.swiply.app.core.network.stomp.StompFrameTest" time="0.001"/>
+  <testcase name="heart-beat (пустой кадр) даёт null" classname="com.swiply.app.core.network.stomp.StompFrameTest" time="0.0"/>
+  <testcase name="serialize даёт валидный кадр, который парсится обратно" classname="com.swiply.app.core.network.stomp.StompFrameTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

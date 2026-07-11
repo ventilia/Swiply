@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.swiply.app.feature.auth.register.RegisterViewModelTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-07-11T16:11:13.273Z" hostname="DESKTOP-23BKBGL" time="0.539">
+  <properties/>
+  <testcase name="submit не зовёт репозиторий при невалидной форме" classname="com.swiply.app.feature.auth.register.RegisterViewModelTest" time="0.453"/>
+  <testcase name="ошибка бэкенда показывается пользователю" classname="com.swiply.app.feature.auth.register.RegisterViewModelTest" time="0.022"/>
+  <testcase name="18 лет ровно — регистрация разрешена" classname="com.swiply.app.feature.auth.register.RegisterViewModelTest" time="0.008"/>
+  <testcase name="пустой interested_in блокирует отправку" classname="com.swiply.app.feature.auth.register.RegisterViewModelTest" time="0.007"/>
+  <testcase name="успешная регистрация снимает loading и не оставляет ошибок" classname="com.swiply.app.feature.auth.register.RegisterViewModelTest" time="0.041"/>
+  <testcase name="несовершеннолетний блокируется на клиенте" classname="com.swiply.app.feature.auth.register.RegisterViewModelTest" time="0.008"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

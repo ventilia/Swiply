@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="auth_back">Back</string>
+    <string name="auth_birth_date">Birth date</string>
+    <string name="auth_birth_date_pick">Pick a date</string>
+    <string name="auth_email">Email</string>
+    <string name="auth_forgot_password">Forgot password?</string>
+    <string name="auth_forgot_send">Send</string>
+    <string name="auth_forgot_sent">If that account exists, the email is on its way</string>
+    <string name="auth_forgot_subtitle">We will email you a reset token</string>
+    <string name="auth_forgot_title">Reset password</string>
+    <string name="auth_gender">I am</string>
+    <string name="auth_gender_female">Woman</string>
+    <string name="auth_gender_male">Man</string>
+    <string name="auth_gender_other">Other</string>
+    <string name="auth_have_account">Already have an account?</string>
+    <string name="auth_interested_in">Show me</string>
+    <string name="auth_interests">Interests (optional)</string>
+    <string name="auth_lang_system">System</string>
+    <string name="auth_language">Language</string>
+    <string name="auth_login_button">Sign in</string>
+    <string name="auth_login_link">Sign in</string>
+    <string name="auth_login_subtitle">Sign in to keep matching</string>
+    <string name="auth_login_title">Welcome back</string>
+    <string name="auth_name">Name</string>
+    <string name="auth_new_password">New password</string>
+    <string name="auth_no_account">No account yet?</string>
+    <string name="auth_password">Password</string>
+    <string name="auth_password_hint">At least 8 characters</string>
+    <string name="auth_register_button">Sign up</string>
+    <string name="auth_register_link">Create one</string>
+    <string name="auth_register_subtitle">Two minutes and you can swipe</string>
+    <string name="auth_register_title">Create account</string>
+    <string name="auth_reset_button">Change password</string>
+    <string name="auth_reset_done">Password updated, you can sign in now</string>
+    <string name="auth_reset_token">Token from the email</string>
+    <string name="auth_show_female">Women</string>
+    <string name="auth_show_male">Men</string>
+    <string name="auth_show_other">Others</string>
+    <string name="auth_terms_hint">By signing up you confirm you are 18 or older</string>
+    <string name="auth_underage_error">Swiply is 18+ only</string>
+</resources>

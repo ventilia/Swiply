@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="celebration_continue">Keep swiping</string>
+    <string name="celebration_subtitle">You and %1$s liked each other</string>
+    <string name="celebration_title">It’s a match!</string>
+    <string name="celebration_write">Say hi</string>
+    <string name="common_back">Back</string>
+    <string name="common_cancel">Cancel</string>
+    <string name="common_confirm">Confirm</string>
+    <string name="likes_empty_text">Complete your profile and add photos — it helps</string>
+    <string name="likes_empty_title">No likes yet</string>
+    <string name="likes_hint">Like them back in the deck to unlock a match</string>
+    <string name="likes_superlike_badge">Super like</string>
+    <string name="likes_title">Who liked you</string>
+    <string name="matches_empty_text">Keep swiping — mutual likes will show up here</string>
+    <string name="matches_empty_title">No matches yet</string>
+    <string name="matches_likes_you">Liked you: %1$d</string>
+    <string name="matches_likes_you_open">See</string>
+    <string name="matches_messages">Messages</string>
+    <string name="matches_new">New matches</string>
+    <string name="matches_no_messages">Say hi first — you already matched!</string>
+    <string name="matches_title">Matches</string>
+    <string name="matches_unmatch">Unmatch</string>
+    <string name="matches_unmatch_confirm">The match and the chat will be permanently removed. Continue?</string>
+    <string name="time_days">%1$dd</string>
+    <string name="time_hours">%1$dh</string>
+    <string name="time_min">%1$dm</string>
+    <string name="time_now">just now</string>
+</resources>

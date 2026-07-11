@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
+<head th:replace="~{admin/layout :: head('Пользователь')}"></head>
+<body>
+<nav th:replace="~{admin/layout :: nav(${active})}"></nav>
+<div class="container">
+    <a href="/admin/users" class="muted" style="font-size:13px">← к списку</a>
+
+    <div style="display:flex;align-items:center;gap:14px;margin:14px 0 4px">
+        <h1 style="margin:0" th:text="${u.displayName ?: u.email}">Имя</h1>
+        <span class="pill" th:classappend="${u.status.name}" th:text="${u.status}">ACTIVE</span>
+        <span class="pill" th:classappend="${u.role.name}" th:text="${u.role}">USER</span>
+    </div>
+    <div class="muted" style="margin-bottom:16px">
+        <span th:text="${u.email}">e</span>
+        <span th:if="${u.age != null}" th:text="' · ' + ${u.age} + ' лет'"></span>
+        <span th:if="${u.city != null}" th:text="' · ' + ${u.city}"></span>
+        <span th:text="${u.emailVerified} ? ' · почта ✓' : ' · почта не подтверждена'"></span>
+    </div>
+
+    <!-- Действия -->
+    <div class="row-actions" th:if="${u.role.name == 'USER'}" style="margin-bottom:18px">
+        <form th:action="@{'/admin/users/' + ${u.id} + '/warn'}" method="post">
+            <button class="btn ghost" type="submit">Предупредить</button>
+        </form>
+        <form th:if="${u.status.name == 'ACTIVE'}" th:action="@{'/admin/users/' + ${u.id} + '/suspend'}" method="post">
+            <button class="btn" type="submit">Приостановить</button>
+        </form>
+        <form th:if="${u.status.name != 'BANNED' and u.status.name != 'DELETED'}" th:action="@{'/admin/users/' + ${u.id} + '/ban'}" method="post">
+            <button class="btn danger" type="submit">Бан</button>
+        </form>
+        <form th:if="${u.status.name == 'BANNED' or u.status.name == 'SUSPENDED'}" th:action="@{'/admin/users/' + ${u.id} + '/unban'}" method="post">
+            <button class="btn success" type="submit">Разбанить</button>
+        </form>
+    </div>
+
+    <div class="card" th:if="${u.bio != null or !#lists.isEmpty(u.interests)}" style="margin-bottom:18px">
+        <p th:if="${u.bio != null}" th:text="${u.bio}" style="margin:0 0 8px">био</p>
+        <div>
+            <span th:each="i : ${u.interests}" class="pill USER" th:text="${i}" style="margin-right:6px">интерес</span>
+        </div>
+    </div>
+
+    <!-- Фото (все статусы) -->
+    <h3 style="font-size:16px;margin:6px 0 10px">Фото</h3>
+    <div class="photo-grid" th:if="${!#lists.isEmpty(u.photos)}">
+        <div class="photo-card" th:each="p : ${u.photos}">
+            <img th:src="${p.url}" alt="фото">
+            <div class="meta">
+                <span class="pill" th:classappend="${p.status.name}" th:text="${p.status}">PENDING</span>
+            </div>
+            <div class="actions">
+                <form th:action="@{'/admin/photos/' + ${p.id} + '/approve'}" method="post">
+                    <button class="btn success" type="submit">Одобрить</button>
+                </form>
+                <form th:action="@{'/admin/photos/' + ${p.id} + '/reject'}" method="post">
+                    <button class="btn danger" type="submit">Отклонить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <p class="muted" th:if="${#lists.isEmpty(u.photos)}">Фото нет</p>
+
+    <!-- Жалобы -->
+    <h3 style="font-size:16px;margin:22px 0 10px">Жалобы на пользователя</h3>
+    <table th:if="${!#lists.isEmpty(u.reports)}">
+        <thead><tr><th>Дата</th><th>Причина</th><th>Описание</th><th>Кто</th><th>Статус</th></tr></thead>
+        <tbody>
+        <tr th:each="r : ${u.reports}">
+            <td class="muted" th:text="${#strings.substring(r.createdAt.toString(),0,16)}">—</td>
+            <td th:text="${r.reason}">SPAM</td>
+            <td class="muted" th:text="${r.description ?: '—'}">—</td>
+            <td class="muted" th:text="${r.reporterEmail ?: '—'}">—</td>
+            <td><span class="pill" th:classappend="${r.status.name}" th:text="${r.status}">PENDING</span></td>
+        </tr>
+        </tbody>
+    </table>
+    <p class="muted" th:if="${#lists.isEmpty(u.reports)}">Жалоб нет</p>
+
+    <!-- История модерации -->
+    <h3 style="font-size:16px;margin:22px 0 10px">История модерации</h3>
+    <table th:if="${!#lists.isEmpty(u.history)}">
+        <thead><tr><th>Дата</th><th>Действие</th><th>Причина</th></tr></thead>
+        <tbody>
+        <tr th:each="h : ${u.history}">
+            <td class="muted" th:text="${#strings.substring(h.createdAt.toString(),0,16)}">—</td>
+            <td th:text="${h.action}">BAN</td>
+            <td class="muted" th:text="${h.reason ?: '—'}">—</td>
+        </tr>
+        </tbody>
+    </table>
+    <p class="muted" th:if="${#lists.isEmpty(u.history)}">Действий не было</p>
+    <div style="height:40px"></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+com.swiply.app.feature.onboarding
+string onboarding_next
+string onboarding_skip
+string onboarding_start
+string onboarding_text_1
+string onboarding_text_2
+string onboarding_text_3
+string onboarding_title_1
+string onboarding_title_2
+string onboarding_title_3

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" lang="ru">
+<head th:fragment="head(title)">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title th:text="${title} + ' — Swiply Admin'">Swiply Admin</title>
+    <style>
+        :root {
+            --bg: #121016;
+            --surface: #1A1922;
+            --surface-2: #242231;
+            --text: #F4F2F8;
+            --text-2: #9E99AB;
+            --coral: #FF4D6D;
+            --violet: #7B3FE4;
+            --teal: #00C2A8;
+            --red: #FF4D4D;
+            --radius: 14px;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+            min-height: 100vh;
+        }
+        a { color: inherit; text-decoration: none; }
+        .topbar {
+            display: flex; align-items: center; gap: 24px;
+            padding: 14px 28px;
+            background: var(--surface);
+            border-bottom: 1px solid #2E2938;
+        }
+        .logo {
+            font-weight: 800; font-size: 20px; letter-spacing: -0.5px;
+            color: var(--coral);
+        }
+        .logo .spark { color: var(--coral); }
+        .nav { display: flex; gap: 4px; flex: 1; }
+        .nav a {
+            padding: 8px 14px; border-radius: 10px; color: var(--text-2);
+            font-weight: 500; transition: all .15s;
+        }
+        .nav a:hover { color: var(--text); background: var(--surface-2); }
+        .nav a.active {
+            color: #fff;
+            background: rgba(255, 77, 109, .16);
+        }
+        .whoami { color: var(--text-2); font-size: 13px; }
+        .logout-btn {
+            background: none; border: 1px solid #3A3346; color: var(--text-2);
+            padding: 7px 14px; border-radius: 10px; cursor: pointer; font-size: 13px;
+        }
+        .logout-btn:hover { color: var(--red); border-color: var(--red); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 28px; }
+        h1 { font-size: 22px; margin-bottom: 20px; font-weight: 700; }
+        .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+        .card {
+            background: var(--surface); border-radius: var(--radius);
+            padding: 20px; border: 1px solid #2E2938;
+        }
+        .card .num { font-size: 30px; font-weight: 800; }
+        .card .label { color: var(--text-2); font-size: 13px; margin-top: 4px; }
+        .card.accent .num { color: var(--coral); }
+        .card.warn .num { color: #FFB020; }
+        table {
+            width: 100%; border-collapse: collapse; background: var(--surface);
+            border-radius: var(--radius); overflow: hidden; border: 1px solid #2E2938;
+        }
+        th, td { text-align: left; padding: 11px 14px; font-size: 13.5px; }
+        th { background: var(--surface-2); color: var(--text-2); font-weight: 600; white-space: nowrap; }
+        tr + tr td { border-top: 1px solid #2A2534; }
+        .muted { color: var(--text-2); }
+        .pill {
+            display: inline-block; padding: 3px 10px; border-radius: 99px;
+            font-size: 12px; font-weight: 600;
+        }
+        .pill.ACTIVE { background: rgba(0,194,168,.15); color: var(--teal); }
+        .pill.SUSPENDED { background: rgba(255,176,32,.15); color: #FFB020; }
+        .pill.BANNED { background: rgba(255,77,77,.15); color: var(--red); }
+        .pill.DELETED { background: #2E2938; color: var(--text-2); }
+        .pill.PENDING { background: rgba(255,176,32,.15); color: #FFB020; }
+        .pill.ACTIONED { background: rgba(0,194,168,.15); color: var(--teal); }
+        .pill.DISMISSED { background: #2E2938; color: var(--text-2); }
+        .pill.ADMIN { background: rgba(123,63,228,.2); color: #B08CFF; }
+        .pill.MODERATOR { background: rgba(123,63,228,.12); color: #9C7BE0; }
+        .pill.USER { background: #2E2938; color: var(--text-2); }
+        .btn {
+            display: inline-block; border: none; cursor: pointer; border-radius: 9px;
+            padding: 7px 12px; font-size: 12.5px; font-weight: 600; color: #fff;
+            background: var(--surface-2); transition: filter .15s;
+        }
+        .btn:hover { filter: brightness(1.2); }
+        .btn.primary { background: var(--coral); }
+        .btn.success { background: rgba(0,194,168,.25); color: var(--teal); }
+        .btn.danger { background: rgba(255,77,77,.2); color: var(--red); }
+        .btn.ghost { background: transparent; border: 1px solid #3A3346; color: var(--text-2); }
+        .row-actions { display: flex; gap: 6px; flex-wrap: wrap; }
+        .row-actions form { display: inline; }
+        .filters { display: flex; gap: 10px; margin-bottom: 18px; flex-wrap: wrap; }
+        input[type=text], select {
+            background: var(--surface); border: 1px solid #3A3346; color: var(--text);
+            padding: 9px 13px; border-radius: 10px; font-size: 14px; outline: none;
+        }
+        input[type=text]:focus, select:focus { border-color: var(--violet); }
+        .photo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+        .photo-card { background: var(--surface); border-radius: var(--radius); overflow: hidden; border: 1px solid #2E2938; }
+        .photo-card img { width: 100%; height: 220px; object-fit: cover; display: block; }
+        .photo-card .meta { padding: 12px; font-size: 12.5px; }
+        .photo-card .actions { display: flex; gap: 8px; padding: 0 12px 12px; }
+        .photo-card .actions form { flex: 1; }
+        .photo-card .actions .btn { width: 100%; }
+        .empty { padding: 40px; text-align: center; color: var(--text-2); }
+        .pager { margin-top: 16px; display: flex; gap: 8px; }
+    </style>
+</head>
+<body>
+<nav th:fragment="nav(active)" class="topbar">
+    <a class="logo" href="/admin/dashboard">sw<span class="spark">i</span>ply<span style="color:#A79FB0;font-weight:500;font-size:13px"> admin</span></a>
+    <div class="nav">
+        <a href="/admin/dashboard" th:classappend="${active == 'dashboard'} ? 'active'">Дашборд</a>
+        <a href="/admin/users" th:classappend="${active == 'users'} ? 'active'">Пользователи</a>
+        <a href="/admin/reports" th:classappend="${active == 'reports'} ? 'active'">Репорты</a>
+        <a href="/admin/photos" th:classappend="${active == 'photos'} ? 'active'">Фото</a>
+    </div>
+    <span class="whoami" sec:authentication="name">moderator</span>
+    <form th:action="@{/admin/logout}" method="post">
+        <button class="logout-btn" type="submit">Выйти</button>
+    </form>
+</nav>
+</body>
+</html>

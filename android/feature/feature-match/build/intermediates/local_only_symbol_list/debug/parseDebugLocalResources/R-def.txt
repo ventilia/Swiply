@@ -1,0 +1,28 @@
+R_DEF: Internal format may change without notice
+local
+string celebration_continue
+string celebration_subtitle
+string celebration_title
+string celebration_write
+string common_back
+string common_cancel
+string common_confirm
+string likes_empty_text
+string likes_empty_title
+string likes_hint
+string likes_superlike_badge
+string likes_title
+string matches_empty_text
+string matches_empty_title
+string matches_likes_you
+string matches_likes_you_open
+string matches_messages
+string matches_new
+string matches_no_messages
+string matches_title
+string matches_unmatch
+string matches_unmatch_confirm
+string time_days
+string time_hours
+string time_min
+string time_now

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
+<head th:replace="~{admin/layout :: head('Дашборд')}"></head>
+<body>
+<nav th:replace="~{admin/layout :: nav(${active})}"></nav>
+<div class="container">
+    <h1>Дашборд</h1>
+    <div class="cards">
+        <div class="card"><div class="num" th:text="${stats.totalUsers}">0</div><div class="label">Всего пользователей</div></div>
+        <div class="card"><div class="num" th:text="${stats.activeUsers}">0</div><div class="label">Активных</div></div>
+        <div class="card warn"><div class="num" th:text="${stats.suspendedUsers}">0</div><div class="label">Приостановлено</div></div>
+        <div class="card warn"><div class="num" th:text="${stats.bannedUsers}">0</div><div class="label">Забанено</div></div>
+        <div class="card accent"><div class="num" th:text="${stats.activeMatches}">0</div><div class="label">Активных мэтчей</div></div>
+        <div class="card"><div class="num" th:text="${stats.totalSwipes}">0</div><div class="label">Свайпов всего</div></div>
+        <div class="card warn"><div class="num" th:text="${stats.pendingReports}">0</div><div class="label">Репортов в очереди</div></div>
+        <div class="card warn"><div class="num" th:text="${stats.pendingPhotos}">0</div><div class="label">Фото на модерации</div></div>
+    </div>
+</div>
+</body>
+</html>

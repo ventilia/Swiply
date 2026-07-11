@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="chat_attach">Attach photo</string>
+    <string name="chat_back">Back</string>
+    <string name="chat_empty_text">You already matched — just say hi</string>
+    <string name="chat_empty_title">Start the conversation</string>
+    <string name="chat_icebreaker_1">Hey! How is your day going? 👋</string>
+    <string name="chat_icebreaker_2">Your photo is great! Where was it taken?</string>
+    <string name="chat_icebreaker_3">Coffee or tea? It matters ☕</string>
+    <string name="chat_input_hint">Message…</string>
+    <string name="chat_last_seen">last seen recently</string>
+    <string name="chat_online">online</string>
+    <string name="chat_photo_message">Photo</string>
+    <string name="chat_send">Send</string>
+    <string name="chat_typing">typing…</string>
+</resources>

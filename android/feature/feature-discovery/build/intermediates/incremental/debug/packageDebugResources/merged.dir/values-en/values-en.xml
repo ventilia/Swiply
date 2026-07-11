@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="discovery_btn_like">Like</string>
+    <string name="discovery_btn_nope">Pass</string>
+    <string name="discovery_btn_superlike">Super like</string>
+    <string name="discovery_btn_undo">Undo</string>
+    <string name="discovery_empty_text">Try widening the search radius in your profile settings</string>
+    <string name="discovery_empty_title">No one around yet</string>
+    <string name="discovery_likes_left">Likes left: %1$d</string>
+    <string name="discovery_location_failed">Could not get your location. Make sure location services are on.</string>
+    <string name="discovery_permission_button">Allow location</string>
+    <string name="discovery_permission_text">Swiply finds people nearby. Allow location access — exact coordinates are never shown to others, only “~3 km”.</string>
+    <string name="discovery_permission_title">Where are you?</string>
+    <string name="discovery_rate_limited">Out of likes for today. Come back tomorrow!</string>
+    <string name="discovery_retry">Retry</string>
+</resources>

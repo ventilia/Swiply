@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_title">Настройки</string>
+    <string name="settings_appearance">Внешний вид</string>
+    <string name="settings_theme_system">Как в системе</string>
+    <string name="settings_theme_light">Светлая</string>
+    <string name="settings_theme_dark">Тёмная</string>
+    <string name="settings_language">Язык</string>
+    <string name="settings_lang_system">Системный</string>
+    <string name="settings_lang_ru">Русский</string>
+    <string name="settings_lang_en">English</string>
+    <string name="settings_notifications">Уведомления</string>
+    <string name="settings_notifications_hint">Мэтчи, лайки и сообщения</string>
+    <string name="settings_account">Аккаунт</string>
+    <string name="settings_blocked">Заблокированные</string>
+    <string name="settings_logout">Выйти</string>
+    <string name="settings_delete">Удалить аккаунт</string>
+    <string name="settings_delete_text">Данные анонимизируются, фото удаляются, вернуть аккаунт нельзя. Введи пароль для подтверждения.</string>
+    <string name="settings_delete_password">Пароль</string>
+    <string name="settings_delete_confirm">Удалить навсегда</string>
+    <string name="settings_privacy_hint">Инкогнито и видимость профиля — в редакторе профиля</string>
+    <string name="blocked_title">Заблокированные</string>
+    <string name="blocked_empty">Никого не блокировал(а)</string>
+    <string name="blocked_unblock">Разблокировать</string>
+    <string name="common_cancel">Отмена</string>
+    <string name="common_back">Назад</string>
+</resources>

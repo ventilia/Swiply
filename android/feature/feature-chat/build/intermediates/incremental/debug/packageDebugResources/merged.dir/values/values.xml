@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="chat_attach">Прикрепить фото</string>
+    <string name="chat_back">Назад</string>
+    <string name="chat_empty_text">Мэтч уже есть — осталось сказать привет</string>
+    <string name="chat_empty_title">Начни разговор</string>
+    <string name="chat_icebreaker_1">Привет! Как проходит день? 👋</string>
+    <string name="chat_icebreaker_2">Твоё фото супер! Где это снято?</string>
+    <string name="chat_icebreaker_3">Кофе или чай? Это важно ☕</string>
+    <string name="chat_input_hint">Сообщение…</string>
+    <string name="chat_last_seen">был(а) недавно</string>
+    <string name="chat_online">в сети</string>
+    <string name="chat_photo_message">Фото</string>
+    <string name="chat_send">Отправить</string>
+    <string name="chat_typing">печатает…</string>
+</resources>

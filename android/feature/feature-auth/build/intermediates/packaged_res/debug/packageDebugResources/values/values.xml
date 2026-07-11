@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="auth_back">Назад</string>
+    <string name="auth_birth_date">Дата рождения</string>
+    <string name="auth_birth_date_pick">Выбрать дату</string>
+    <string name="auth_email">Email</string>
+    <string name="auth_forgot_password">Забыли пароль?</string>
+    <string name="auth_forgot_send">Отправить</string>
+    <string name="auth_forgot_sent">Если такой аккаунт есть — письмо уже в пути</string>
+    <string name="auth_forgot_subtitle">Пришлём токен сброса на почту</string>
+    <string name="auth_forgot_title">Сброс пароля</string>
+    <string name="auth_gender">Я</string>
+    <string name="auth_gender_female">Женщина</string>
+    <string name="auth_gender_male">Мужчина</string>
+    <string name="auth_gender_other">Другое</string>
+    <string name="auth_have_account">Уже есть аккаунт?</string>
+    <string name="auth_interested_in">Показывать мне</string>
+    <string name="auth_interests">Интересы (необязательно)</string>
+    <string name="auth_lang_system">Система</string>
+    <string name="auth_language">Язык</string>
+    <string name="auth_login_button">Войти</string>
+    <string name="auth_login_link">Войти</string>
+    <string name="auth_login_subtitle">Войди, чтобы продолжить знакомства</string>
+    <string name="auth_login_title">С возвращением</string>
+    <string name="auth_name">Имя</string>
+    <string name="auth_new_password">Новый пароль</string>
+    <string name="auth_no_account">Ещё нет аккаунта?</string>
+    <string name="auth_password">Пароль</string>
+    <string name="auth_password_hint">Минимум 8 символов</string>
+    <string name="auth_register_button">Зарегистрироваться</string>
+    <string name="auth_register_link">Создать</string>
+    <string name="auth_register_subtitle">Пара минут — и можно свайпать</string>
+    <string name="auth_register_title">Создать аккаунт</string>
+    <string name="auth_reset_button">Сменить пароль</string>
+    <string name="auth_reset_done">Пароль обновлён, теперь можно войти</string>
+    <string name="auth_reset_token">Токен из письма</string>
+    <string name="auth_show_female">Женщин</string>
+    <string name="auth_show_male">Мужчин</string>
+    <string name="auth_show_other">Других</string>
+    <string name="auth_terms_hint">Регистрируясь, ты подтверждаешь, что тебе есть 18 лет</string>
+    <string name="auth_underage_error">Swiply доступен только с 18 лет</string>
+</resources>

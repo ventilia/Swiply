@@ -1,0 +1,87 @@
+spring:
+  application:
+    name: swiply-backend
+  profiles:
+    default: local
+  servlet:
+    multipart:
+      max-file-size: 12MB
+      max-request-size: 14MB
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        jdbc.time_zone: UTC
+  flyway:
+    enabled: true
+  data:
+    mongodb:
+      auto-index-creation: true
+  jackson:
+    default-property-inclusion: non_null
+
+server:
+  port: 8080
+  error:
+    include-message: always
+    include-stacktrace: never
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+  endpoint:
+    health:
+      show-details: always
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+  api-docs:
+    path: /v3/api-docs
+
+swiply:
+  jwt:
+
+    secret: ${JWT_SECRET:dev-only-secret-change-me-please-0123456789-0123456789-0123456789}
+    issuer: swiply
+    access-ttl: 15m
+    refresh-ttl: 30d
+  media:
+    endpoint: http://localhost:9100
+    public-endpoint: ${MEDIA_PUBLIC_ENDPOINT:http://10.0.2.2:9100}
+    access-key: ${MINIO_ROOT_USER:swiply}
+    secret-key: ${MINIO_ROOT_PASSWORD:swiply-secret}
+    photos-bucket: swiply-photos
+    presign-ttl: 30m
+    max-photo-bytes: 10485760
+    max-photos-per-user: 6
+    max-dimension-px: 2048
+    thumbnail-sizes: 512,128
+  discovery:
+    cache-ttl: 10m
+    page-size-max: 50
+    radius-km-max: 300
+  limits:
+    swipes-per-day: 100
+    superlikes-per-day: 5
+    messages-per-10s: 15
+    reports-per-day: 10
+    login-per-minute: 10
+    register-per-hour: 30
+  auth:
+    email-verification-ttl: 24h
+    password-reset-ttl: 1h
+    # По умолчанию токены писем НЕ печатаются в лог. Локальный профиль включает
+    # это для тестирования флоу без SMTP.
+    log-email-tokens: false
+  admin:
+    bootstrap-email: ${ADMIN_EMAIL:admin@swiply.local}
+    bootstrap-password: ${ADMIN_PASSWORD:admin12345}
+  seed:
+    enabled: ${SWIPLY_SEED_ENABLED:false}

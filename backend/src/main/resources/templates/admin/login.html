@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
+<head th:replace="~{admin/layout :: head('Вход')}"></head>
+<body>
+<div style="min-height:100vh;display:flex;align-items:center;justify-content:center;">
+    <div class="card" style="width:360px;padding:32px;">
+        <div class="logo" style="font-size:28px;text-align:center;margin-bottom:6px;">
+            sw<span class="spark">i</span>ply
+        </div>
+        <p class="muted" style="text-align:center;margin-bottom:24px;">Панель модерации</p>
+
+        <p th:if="${param.error}" style="color:var(--red);margin-bottom:14px;font-size:13.5px;">
+            Неверная почта или пароль, либо нет прав доступа.
+        </p>
+        <p th:if="${param.logout}" style="color:var(--teal);margin-bottom:14px;font-size:13.5px;">
+            Вы вышли из системы.
+        </p>
+
+        <form th:action="@{/admin/login}" method="post" style="display:flex;flex-direction:column;gap:12px;">
+            <input type="text" name="username" placeholder="Email" autofocus autocomplete="username">
+            <input type="password" name="password" placeholder="Пароль" autocomplete="current-password"
+                   style="background:var(--surface);border:1px solid #3A3346;color:var(--text);padding:9px 13px;border-radius:10px;font-size:14px;outline:none;">
+            <button class="btn primary" type="submit" style="padding:11px;font-size:14px;">Войти</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

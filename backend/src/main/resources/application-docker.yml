@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://postgres:5432/${POSTGRES_DB:swiply}
+    username: ${POSTGRES_USER:swiply}
+    password: ${POSTGRES_PASSWORD:swiply-secret}
+  data:
+    mongodb:
+      uri: mongodb://${MONGO_USER:swiply}:${MONGO_PASSWORD:swiply-secret}@mongodb:27017/${MONGO_DB:swiply}?authSource=admin
+    redis:
+      host: redis
+      port: 6379
+  rabbitmq:
+    host: rabbitmq
+    port: 5672
+    username: ${RABBITMQ_USER:swiply}
+    password: ${RABBITMQ_PASSWORD:swiply-secret}
+
+swiply:
+  media:
+    endpoint: http://minio:9000

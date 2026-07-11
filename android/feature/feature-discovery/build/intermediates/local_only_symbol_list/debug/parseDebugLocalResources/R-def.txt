@@ -1,0 +1,15 @@
+R_DEF: Internal format may change without notice
+local
+string discovery_btn_like
+string discovery_btn_nope
+string discovery_btn_superlike
+string discovery_btn_undo
+string discovery_empty_text
+string discovery_empty_title
+string discovery_likes_left
+string discovery_location_failed
+string discovery_permission_button
+string discovery_permission_text
+string discovery_permission_title
+string discovery_rate_limited
+string discovery_retry

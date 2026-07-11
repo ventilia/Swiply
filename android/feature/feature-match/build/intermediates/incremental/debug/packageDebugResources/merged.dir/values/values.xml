@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="celebration_continue">Продолжить смотреть</string>
+    <string name="celebration_subtitle">Вы понравились друг другу с %1$s</string>
+    <string name="celebration_title">Это мэтч!</string>
+    <string name="celebration_write">Написать</string>
+    <string name="common_back">Назад</string>
+    <string name="common_cancel">Отмена</string>
+    <string name="common_confirm">Подтвердить</string>
+    <string name="likes_empty_text">Заполни профиль и добавь фото — это помогает</string>
+    <string name="likes_empty_title">Пока никто не лайкнул</string>
+    <string name="likes_hint">Лайкни в ответ в ленте — и откроется мэтч</string>
+    <string name="likes_superlike_badge">Суперлайк</string>
+    <string name="likes_title">Кто лайкнул тебя</string>
+    <string name="matches_empty_text">Свайпай — взаимные лайки появятся здесь</string>
+    <string name="matches_empty_title">Пока нет мэтчей</string>
+    <string name="matches_likes_you">Тебя лайкнули: %1$d</string>
+    <string name="matches_likes_you_open">Смотреть</string>
+    <string name="matches_messages">Сообщения</string>
+    <string name="matches_new">Новые мэтчи</string>
+    <string name="matches_no_messages">Напиши первым — мэтч уже есть!</string>
+    <string name="matches_title">Мэтчи</string>
+    <string name="matches_unmatch">Разорвать мэтч</string>
+    <string name="matches_unmatch_confirm">Мэтч и переписка будут удалены безвозвратно. Продолжить?</string>
+    <string name="time_days">%1$d д</string>
+    <string name="time_hours">%1$d ч</string>
+    <string name="time_min">%1$d мин</string>
+    <string name="time_now">только что</string>
+</resources>

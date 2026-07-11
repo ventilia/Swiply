@@ -1,0 +1,1 @@
+-keep,allowobfuscation,allowshrinking class com.swiply.app.feature.match.likes.LikesViewModel

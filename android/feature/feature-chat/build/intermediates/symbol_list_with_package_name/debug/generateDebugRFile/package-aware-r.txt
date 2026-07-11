@@ -1,0 +1,14 @@
+com.swiply.app.feature.chat
+string chat_attach
+string chat_back
+string chat_empty_text
+string chat_empty_title
+string chat_icebreaker_1
+string chat_icebreaker_2
+string chat_icebreaker_3
+string chat_input_hint
+string chat_last_seen
+string chat_online
+string chat_photo_message
+string chat_send
+string chat_typing

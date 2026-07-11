@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="onboarding_next">Дальше</string>
+    <string name="onboarding_skip">Пропустить</string>
+    <string name="onboarding_start">Начать</string>
+    <string name="onboarding_text_1">Вправо — нравится, влево — дальше. Всё как ты привык, только лучше.</string>
+    <string name="onboarding_text_2">Взаимный лайк — это мэтч. Даже если второй человек сейчас офлайн.</string>
+    <string name="onboarding_text_3">Чат в реальном времени: печатает, доставлено, прочитано.</string>
+    <string name="onboarding_title_1">Свайпай</string>
+    <string name="onboarding_title_2">Мэтчись</string>
+    <string name="onboarding_title_3">Общайся</string>
+</resources>

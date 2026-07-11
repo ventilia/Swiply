@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="discovery_permission_title">Где ты?</string>
+    <string name="discovery_permission_text">Swiply подбирает людей рядом. Разреши доступ к геолокации — точные координаты никогда не показываются другим, только «~3 км».</string>
+    <string name="discovery_permission_button">Разрешить геолокацию</string>
+    <string name="discovery_location_failed">Не удалось определить местоположение. Проверь, что геолокация включена.</string>
+    <string name="discovery_retry">Повторить</string>
+    <string name="discovery_empty_title">Пока никого рядом</string>
+    <string name="discovery_empty_text">Попробуй расширить радиус поиска в настройках профиля</string>
+    <string name="discovery_rate_limited">Лайки на сегодня закончились. Возвращайся завтра!</string>
+    <string name="discovery_likes_left">Осталось лайков: %1$d</string>
+    <string name="discovery_btn_nope">Пропустить</string>
+    <string name="discovery_btn_like">Лайк</string>
+    <string name="discovery_btn_superlike">Суперлайк</string>
+    <string name="discovery_btn_undo">Вернуть</string>
+</resources>
